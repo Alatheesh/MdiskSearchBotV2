@@ -37,8 +37,8 @@ async def mdisk_handler(_, event: Message):
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{Config.BOT_USERNAME}?startgroup=true')
             ],
 
-             [InlineKeyboardButton("Dulink", callback_data="Terabox_msg"),
-             InlineKeyboardButton('Watch Video', url='https://t.me/CyniteBackup/17')
+             [InlineKeyboardButton("Dulink", callback_data="dulink_msg"),
+             InlineKeyboardButton('Watch Video', url='https://t.me/llathu63035')
              ]
         ])
     )
@@ -68,7 +68,7 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Support', url=f'https://t.me/Cynitesupport')
+            InlineKeyboardButton('Support', url=f'https://t.me/llathu63035')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
