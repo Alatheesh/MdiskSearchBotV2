@@ -37,15 +37,15 @@ async def mdisk_handler(_, event: Message):
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{Config.BOT_USERNAME}?startgroup=true')
             ],
 
-             [InlineKeyboardButton("TeraBox", callback_data="Terabox_msg"),
+             [InlineKeyboardButton("Dulink", callback_data="Terabox_msg"),
              InlineKeyboardButton('Watch Video', url='https://t.me/CyniteBackup/17')
              ]
         ])
     )
 
-@Client.on_message(filters.command("Terabox") & filters.private)
+@Client.on_message(filters.command("Dulink") & filters.private)
 async def terabox_handler(_, event: Message):
-    await event.reply_text(Config.ABOUT_TERABOX_TEXT.format(event.from_user.mention),
+    await event.reply_text(Config.ABOUT_DULINK_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
             [
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{Config.BOT_USERNAME}?startgroup=true')
