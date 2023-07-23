@@ -132,12 +132,13 @@ async def message_handler(event):
         newbutton = [Button.url('FILES BOT 🤫',
                                     f'https://t.me/suchitha1bot')]
 
-        await txt.delete()
-        await asyncio.sleep(0.5)
-        result = await event.reply(message, buttons=newbutton, link_preview=False)
-        await asyncio.sleep(Config.AUTO_DELETE_TIME)
-        # await event.delete()
-        return await result.delete()
+        if txt is not None:
+            await txt.delete()
+            await asyncio.sleep(0.5)
+            result = await event.reply(message, buttons=newbutton, link_preview=False)
+            await asyncio.sleep(Config.AUTO_DELETE_TIME)
+            #await event.delete()
+            return await result.delete()
 
     except Exception as e:
         print(e)
