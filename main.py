@@ -57,12 +57,10 @@ async def message_handler(event):
         print("Search Query: {args}".format(args=args))
         print("\n")
 
+        txt = None
+
         if not args:
-            return
-
-        txt = await event.reply('**Printing Links For "{}" 🔍**'.format(event.text))
-
-
+            txt = await event.reply('**Printing Links For "{}" 🔍**'.format(event.text))
 
         search = []
         if event.is_group or event.is_channel:
